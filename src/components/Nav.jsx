@@ -4,6 +4,8 @@ import {hamburger} from "../assets/icons"
 import { navLinks } from '../constants'
 import ToogleButton from './ToogleButton'
 
+import { Link } from 'react-router-dom'
+
 
 export const Nav = () => {
   return (
