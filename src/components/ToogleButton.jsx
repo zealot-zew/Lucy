@@ -12,17 +12,17 @@ const ToggleButton = () => {
   };
 
   return (
-    <label htmlFor="check" className='bg-gray-300 relative cursor-pointer w-20 h-10 rounded-full'>
-      <input 
-        type='checkbox' 
-        id='check' 
-        className='sr-only peer' 
+    <label htmlFor="check" className={`relative cursor-pointer w-12 h-6 rounded-full transition-colors duration-300 ${isDark ? 'bg-gray-800' : 'bg-gray-300'}`}>
+      <input
+        type='checkbox'
+        id='check'
+        className='sr-only peer'
         onClick={() => {
           setIsDark(!isDark);
           themeSwitch();
         }}
       />
-      <span className={`w-2/5 h-4/5 bg-white absolute rounded-full left-1 top-1 transition-all duration-500 ${isDark ? 'bg-gray-800 left-11' : ''}`}></span>
+      <span className={`w-5 h-5 bg-white absolute rounded-full left-0.5 top-0.5 transition-all duration-300 ${isDark ? 'bg-gray-800 left-6' : ''}`}></span>
     </label>
   );
 };
