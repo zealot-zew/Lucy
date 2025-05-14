@@ -1,47 +1,42 @@
-import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { dw1, dw2, influencer, lead, contentcreation, influencermarketing, socialmedia, customer1, customer2, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
+import { facebook, instagram, drawing, cat, maps, twitter } from "../assets/icons";
 
 export const navLinks = [
-    { href: "#co-drawing", label: "Co-Drawing" },
-    { href: "#tiny-cats", label: "Tiny Cats" },
-    { href: "#map-planner", label: "Map Planner" },
-    { href: "#spatial-understanding ", label: "Spatial Understanding" },
+    { href: "lucy", page: "LucyChat", label: "Lucy Chat" },
+    { href: "#co-drawing", page: "CoDrawing", label: "Co-Drawing" },
+    { href: "#tiny-cats", page: "TinyCats", label: "Tiny Cats" },
+    { href: "#map-planner", page: "MapExplorer", label: "Map Planner" },
 ];
 
 export const features = [
     {
-        imgURL: truckFast,
+        imgURL: drawing,
+        page: "CoDrawing",
         label: "Co-Drawing",
         subtext: "Sketch and Prompt, AI brings your drawing to life! Co create amazing art."
     },
     {
-        imgURL: shieldTick,
+        imgURL: cat,
+        page: "TinyCats",
         label: "Tiny Cats",
         subtext: "Condused? Let the Tiny cats explain! Get fun, illustrated slideshows breaking down complex topics with adorable feline metaphors. Cute, simple learning!"
     },
     {
-        imgURL: support,
+        imgURL: maps,
+        page: "MapExplorer",
         label: "Map Planner",
-        subtext: "Explore the world, one tap at a time! Discover amamzing places, plan your perfect day trips, and visualize your adventures on an interactive map."
-    },
-    {
-        imgURL: support,
-        label: "SpatialAwareness",
-        subtext: "Unlock AI's vision! Detect object in images or screenshares with interactive 2D/3D bounding boxes and points. Explore AI precetion!"
+        subtext: "(coming soon)  Explore the world, one tap at a time! Discover amamzing places, plan your perfect day trips, and visualize your adventures on an interactive map."
     },
 ];
 
 
 export const footerLinks = [
     {
-        title: "Services",
+        title: "Features",
         links: [
-            { name: "Lead Generation", link: "/" },
-            { name: "Social Media Marketing", link: "/" },
-            { name: "Influencer Marketing", link: "/" },
-            { name: "SEO", link: "/" },
-            { name: "Content Creation", link: "/" },
-            { name: "Business Consulatation", link: "/" },
+            { name: "Co-Drawing", link: "/" },
+            { name: "Tiny Cats", link: "/" },
+            { name: "Map Planner", link: "/" },
+            { name: "SpatialAwareness", link: "/" },
         ],
     },
     {

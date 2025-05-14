@@ -13,7 +13,7 @@ const Button = ({
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/ContactUS"); // Always navigate to /contact
+    navigate("/LucyChat"); // Always navigate to /contact
   };
   return (
     <button

@@ -17,7 +17,7 @@ const Footer = () => {
             />
           </a>
           <p className='mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm'>
-          Turning ideas into impact, one click at a time.
+            Ask Anything, Explore Everything
           </p>
           <div className='flex items-center gap-5 mt-8'>
             {socialMedia.map((icon) => (

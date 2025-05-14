@@ -2,18 +2,30 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import ContactUS from './pages/ContactUS.jsx'
 
-import {createBrowserRouter,RouterProvider,Route,} from "react-router-dom"
+import { createBrowserRouter, RouterProvider, Route } from "react-router-dom"
+import { CoDrawing, MapExplorer, TinyCats, LucyChat } from './pages/index.js'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
   },
   {
-    path: "ContactUS",
-    element: <ContactUS/>,
+    path: "CoDrawing",
+    element: <CoDrawing />,
+  },
+  {
+    path: "LucyChat",
+    element: <LucyChat />,
+  },
+  {
+    path: "TinyCats",
+    element: <TinyCats />,
+  },
+  {
+    path: "MapExplorer",
+    element: <MapExplorer />,
   },
 ]);
 

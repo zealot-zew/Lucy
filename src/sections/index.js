@@ -1,8 +1,8 @@
 import Footer from "./Footer";
 import Features from "./Features";
-import Subscribe from "./Subscribe";
-import SuperQuality from "./SuperQuality";
+import Quote from "./Quote";
+import Hero from "./Hero";
 
 export {
-    Footer, Features, Subscribe, SuperQuality
+    Footer, Features, Quote, Hero
 }

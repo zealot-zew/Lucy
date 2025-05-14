@@ -11,6 +11,10 @@ import star from './star.svg'
 import truckFast from './truck-fast.svg'
 import twitter from './twitter.svg'
 
+import drawing from './drawing.png'
+import cat from './cat.png'
+import maps from './maps.png'
+
 export {
     arrowRight,
     cheveronRight,
@@ -23,5 +27,8 @@ export {
     shieldTick,
     star,
     truckFast,
-    twitter
+    twitter,
+    drawing,
+    cat,
+    maps
 }
