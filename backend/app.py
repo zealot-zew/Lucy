@@ -5,7 +5,7 @@ from flask_cors import CORS
 from lucyAI import ask_gemini
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "https://lucyaiapp.netlify.app"}})
 
 # Configure SQLite
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'
@@ -109,4 +109,4 @@ def ask_ai(conv_id):
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()  # Creates DB tables if not exist
-    app.run(host='0.0.0.0', port=5002, debug=True)
+    app.run()

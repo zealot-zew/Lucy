@@ -2,9 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import AnimatedLayout from './components/AnimatedLayout.jsx';
 
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom"
-import { CoDrawing, MapExplorer, TinyCats, LucyChat } from './pages/index.js'
+import { CoDrawing, MapExplorer, TinyCats, LucyChat, LucyChatBase } from './pages/index.js'
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "CoDrawing",
     element: <CoDrawing />,
+  },
+  {
+    path: "lucychat/base",
+    element: <LucyChatBase />,
   },
   {
     path: "lucychat/:convId",

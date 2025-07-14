@@ -1,7 +1,7 @@
 import { facebook, instagram, drawing, cat, maps, twitter } from "../assets/icons";
 
 export const navLinks = [
-    { href: "lucy", page: "LucyChat", label: "Lucy Chat" },
+    { href: "/", page: "lucychat/base", label: "Lucy Chat" },
     { href: "#co-drawing", page: "CoDrawing", label: "Co-Drawing" },
     { href: "#tiny-cats", page: "TinyCats", label: "Tiny Cats" },
     { href: "#map-planner", page: "MapExplorer", label: "Map Planner" },

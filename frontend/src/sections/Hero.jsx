@@ -13,6 +13,13 @@ const Hero = () => {
   const [prompt, setPrompt] = useState('');
   const navigate = useNavigate();
 
+  const handleSubmitKey = (event) => {
+    if (event.key === "Enter" && !event.shiftKey) {
+      event.preventDefault();
+      handleSubmit();
+    }
+  }
+
   const handleSubmit = async () => {
     if (!prompt.trim()) return;
 
@@ -77,6 +84,7 @@ const Hero = () => {
           <input
             type="search"
             value={prompt}
+            onKeyDown={handleSubmitKey}
             onChange={(e) => setPrompt(e.target.value)}
             className="h-[53px] w-full bg-[#ff6452] text-white placeholder-white px-6 pr-[130px] rounded-full outline-none"
             placeholder="Enter a prompt"
