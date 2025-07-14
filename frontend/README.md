@@ -1,61 +1,15 @@
-<h1 align="center">Lucy.AI 🤖✨</h1>
+<!--
+ Copyright 2024 hari
 
-<p align="center">
-  A creative and conversational AI assistant powered by <b>Gemini</b>, with exciting features like <b>Co-Drawing</b>, <b>Tiny Cats</b>, and an upcoming <b>Map Explorer</b>!  
-</p>
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
 
-<p align="center">
-  🌐 <a href="https://lucyaiapp.netlify.app/" target="_blank"><b>Try it Live →</b></a>
-</p>
+     https://www.apache.org/licenses/LICENSE-2.0
 
----
-
-## 🎯 About Lucy.AI
-
-**Lucy.AI** is your next-gen AI companion built using React (frontend) and Flask (backend), powered by **Google's Gemini AI** for natural conversations, image-based collaboration, and fun surprises.
-
----
-
-## 🖼️ Preview
-
-<img width="1052" height="709" alt="image" src="https://github.com/user-attachments/assets/adfb1ab3-c1f8-47fb-a211-da89d56a2b9b" />
-<sub><i>✨ Home page of Lucy.AI with sleek prompt UI</i></sub>
-
----
-
-## 🚀 Features
-
-| Feature        | Description |
-|----------------|-------------|
-| 💬 **Prompt Bar** | Ask questions, get creative, or explore knowledge with Gemini AI |
-| 🎨 **Co-Drawing** | Collaborate with the AI on drawing (images-to-images or canvas-based collaboration) |
-| 🗺️ **Map Explorer** | [Coming Soon] Explore locations interactively with AI-generated insights |
-| 🐱 **Tiny Cats** | Fun little interactive cat animations |
-| 🔐 **Secure Backend** | All AI calls routed through Flask to protect Gemini API key |
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|-------|------------|
-| 🧠 AI Engine | Gemini API (Google Generative AI) |
-| 🌐 Frontend | React.js + Tailwind CSS |
-| 🔧 Backend | Flask + Flask-CORS |
-| 🌍 Deployment | Netlify (Frontend) + Render (Backend) |
-
----
-
-## 🧪 Local Development
-
-### 🖥️ Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
-### 🖥️ Backend
-```bash
-cd backend
-pip install -r requirements.txt
-python app.py
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
