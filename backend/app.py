@@ -4,19 +4,15 @@ from datetime import datetime
 from flask_cors import CORS
 from lucyAI import ask_gemini
 import os
-from config import config
 
 app = Flask(__name__)
 
-# Choose configuration based on environment
-env = os.environ.get('FLASK_ENV', 'development')
-app.config.from_object(config[env])
+# Configure SQLite
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Configure CORS
-if env == 'production':
-    CORS(app, resources={r"/api/*": {"origins": ["https://lucyaiapp.netlify.app"]}})
-else:
-    CORS(app, resources={r"/api/*": {"origins": ["https://lucyaiapp.netlify.app", "http://localhost:3000", "http://localhost:5173"]}})
+# Configure CORS - allow both Netlify frontend and local development
+CORS(app, resources={r"/api/*": {"origins": ["https://lucyaiapp.netlify.app", "http://localhost:3000", "http://localhost:5173"]}})
 
 # Initialize DB
 db = SQLAlchemy(app)

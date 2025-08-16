@@ -36,8 +36,9 @@ Make sure your backend code is in a Git repository and pushed to GitHub/GitLab.
 
 3. **Set Environment Variables**
    - Click on "Environment" tab
-   - Add the following variables:
+   - Add the following variable:
      - `GEMINI_API_KEY`: Your actual Gemini API key
+   - (Optional) Add these for better security:
      - `FLASK_ENV`: `production`
      - `SECRET_KEY`: A random secret string
 
@@ -57,9 +58,10 @@ Once deployed, you'll get a URL like `https://your-app-name.onrender.com`. Updat
 
 ## Environment Variables
 
-Make sure these are set in Render:
-
+**Required:**
 - `GEMINI_API_KEY`: Your Gemini API key
+
+**Optional (for better security):**
 - `FLASK_ENV`: `production`
 - `SECRET_KEY`: A secure random string
 
