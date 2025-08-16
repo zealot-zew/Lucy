@@ -3,12 +3,13 @@ from dotenv import load_dotenv
 import google.generativeai as genai
 import re # Import the regular expression module
 
+# Load environment variables
 load_dotenv()
 
-# Ensure your API key is correctly set in your .env file or environment variables
+# Get API key from environment variables
 api_key = os.getenv('GEMINI_API_KEY')
 if not api_key:
-    raise ValueError("GEMINI_API_KEY not found. Please set it in your .env file or environment.")
+    raise ValueError("GEMINI_API_KEY not found. Please set it in your environment variables.")
 genai.configure(api_key=api_key)
 
 generation_config = {
@@ -25,7 +26,7 @@ model = genai.GenerativeModel(
 )
 
 # --- Your hardcoded details ---
-HARDCODED_NAME = "Deola"
+HARDCODED_NAME = "Lucy"
 # This is now a base theme, not the exact response
 BASE_COMPLIMENT_THEME = f"{HARDCODED_NAME} is incredibly cute and beautiful."
 

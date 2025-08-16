@@ -3,13 +3,20 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_cors import CORS
 from lucyAI import ask_gemini
+import os
+from config import config
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "https://lucyaiapp.netlify.app"}})
 
-# Configure SQLite
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# Choose configuration based on environment
+env = os.environ.get('FLASK_ENV', 'development')
+app.config.from_object(config[env])
+
+# Configure CORS
+if env == 'production':
+    CORS(app, resources={r"/api/*": {"origins": ["https://lucyaiapp.netlify.app"]}})
+else:
+    CORS(app, resources={r"/api/*": {"origins": ["https://lucyaiapp.netlify.app", "http://localhost:3000", "http://localhost:5173"]}})
 
 # Initialize DB
 db = SQLAlchemy(app)
@@ -28,6 +35,11 @@ class Message(db.Model):
     conversation_id = db.Column(db.String(10), db.ForeignKey('conversation.id'), nullable=False)
 
 # --- ROUTES ---
+
+# Health check endpoint for Render
+@app.route('/api/health', methods=['GET'])
+def health_check():
+    return jsonify({"status": "healthy", "message": "Lucy Backend is running!"}), 200
 
 # Create new conversation
 @app.route('/api/create_conversation/<string:conv_id>', methods=['POST'])
